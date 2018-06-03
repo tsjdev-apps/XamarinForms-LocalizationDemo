@@ -1,14 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:XFLocalization"
+             xmlns:common="clr-namespace:XFLocalization.Common"
              x:Class="XFLocalization.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <Label Text="{common:Translate AppTitle}"
+               FontSize="Large"
+               HorizontalTextAlignment="Center" />
+        <Label Text="{common:Translate LanguageLabel}"
+               FontSize="Medium"
+               HorizontalTextAlignment="Center" />
     </StackLayout>
 
 </ContentPage>
